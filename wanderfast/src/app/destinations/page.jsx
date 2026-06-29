@@ -1,4 +1,4 @@
-import { Button, Card, CloseButton } from "@heroui/react";
+import { Button, Card} from "@heroui/react";
 import Image from "next/image";
 
 const getDestinations = async() => {

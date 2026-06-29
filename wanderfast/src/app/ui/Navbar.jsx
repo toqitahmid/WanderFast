@@ -28,7 +28,7 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               <Link href="/">Home</Link>
-              <Link href="">Destinations</Link>
+              <Link href="/destinations">Destinations</Link>
               <Link href="">My Bookings</Link>
               <Link href={"/add-destinations"}>Add destination</Link>
             </ul>
@@ -39,7 +39,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1 space-x-3">
             <Link href="/">Home</Link>
             <Link href="/destinations">Destinations</Link>
-            <Link href="">My Bookings</Link>
+            <Link href="/">My Bookings</Link>
             <Link href="/add-destinations">Add destination</Link>
           </ul>
         </div>
