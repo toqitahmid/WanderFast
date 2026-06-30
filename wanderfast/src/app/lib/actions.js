@@ -20,3 +20,21 @@ export const addNewDestinations = async(formData) => {
     }
     return data;
 }
+
+export const updateDestinationData = async(id, formData) => {
+    const updateDestination = Object.fromEntries(formData.entries());
+
+    const res = await fetch(`http://localhost:5000/destination/${id}`,{
+        method: "PATCH",
+        headers: {
+            'content-type': 'application/json',
+        },
+        body: JSON.stringify(updateDestination),
+    });
+    const data = await res.json();
+    if(data.modifiedCount > 0){
+        revalidatePath(`/destinations/${id}`);
+        revalidatePath(`/destinations`);
+        redirect(`/destinations/${id}`);
+    }
+}

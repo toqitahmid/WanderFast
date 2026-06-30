@@ -1,3 +1,4 @@
+import { updateDestinationData } from "@/app/lib/actions";
 import {
   Button,
   FieldError,
@@ -9,10 +10,15 @@ import {
   Select,
 } from "@heroui/react";
 
-const EditDestinationForm = ({destinationDetails}) => {
+const EditDestinationForm = async({destinationDetails}) => {
+
+  const updateDestinationWrapper = async(formData) => {
+    'use server'
+    return updateDestinationData(destinationDetails._id, formData)
+  }
     return (
       <div>
-        <form className="p-10 space-y-8">
+        <form action={updateDestinationWrapper} className="p-10 space-y-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Destination Name */}
             <div className="md:col-span-2">

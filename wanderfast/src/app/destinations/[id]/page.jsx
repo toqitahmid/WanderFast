@@ -61,12 +61,6 @@ const destinationDetailsPage = async({params}) => {
                         </Surface>
                     <EditDestinationForm destinationDetails = {destinationDetails}></EditDestinationForm>
                       </Modal.Body>
-                      <Modal.Footer>
-                        <Button slot="close" variant="secondary">
-                          Cancel
-                        </Button>
-                        <Button slot="close">Send Message</Button>
-                      </Modal.Footer>
                     </Modal.Dialog>
                   </Modal.Container>
                 </Modal.Backdrop>
