@@ -38,3 +38,14 @@ export const updateDestinationData = async(id, formData) => {
         redirect(`/destinations/${id}`);
     }
 }
+
+export const deleteDestination = async(id) => {
+    const res = await fetch (`http://localhost:5000/destination/${id}`,{
+        method: 'DELETE'
+    });
+    const data = await res.json();
+    if(data.deletedCount > 0){
+        revalidatePath('/destinations');
+    }
+    return data;
+}

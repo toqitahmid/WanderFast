@@ -45,7 +45,9 @@ const destinationDetailsPage = async({params}) => {
                 </span>
               </div>
               <Modal>
+                <div className='flex flex-col gap-2'>
                 <Button variant="secondary">Open Editor Form</Button>
+                </div>
                 <Modal.Backdrop>
                   <Modal.Container placement="auto">
                     <Modal.Dialog className="sm:max-w-md">
