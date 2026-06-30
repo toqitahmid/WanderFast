@@ -14,7 +14,7 @@ import {
 const AddNewDestinationForm = ({ addNewDestinationAction }) => {
   return (
     <div className="lg:w-9/12 md:w-10/12 w-11/12 mx-auto">
-      <form action={addNewDestinationAction} className="p-10 space-y-8">
+      <form action={addNewDestinationAction } className="p-10 space-y-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Destination Name */}
           <div className="md:col-span-2">

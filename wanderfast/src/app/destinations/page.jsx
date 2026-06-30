@@ -1,5 +1,6 @@
 import { Button, Card} from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const getDestinations = async() => {
     const res = await fetch("http://localhost:5000/destination");
@@ -47,9 +48,11 @@ const Destinations = async() => {
                     Price: {destination.price}
                   </span>
                 </div>
-                <Button variant="outline" className="w-full sm:w-auto">
-                  See Details
-                </Button>
+                <Link href={`/destinations/${destination._id}`}>
+                  <Button variant="outline" className="w-full sm:w-auto">
+                    See Details
+                  </Button>
+                </Link>
               </Card.Footer>
             </div>
           </Card>
